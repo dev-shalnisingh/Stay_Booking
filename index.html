@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayBooking </title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+    <style>
+       
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    height: 100vh;
+
+}
+
+.navbar{
+    background-color: #00753b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a i{
+    margin-right: 6px;
+}
+
+.nav-links a:hover{
+    color: #d4f5d4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo{
+        font-size: 1.8rem;
+    }
+
+    .nav-links a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li{
+        padding: 8px 0;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+    }
+}
+
+
+    section{
+    min-height:100vh;
+    padding-bottom:40px;
+}
+
+#box{
+    width:100%;
+    background:#3dcb84;
+    padding:60px 20px;
+    text-align:center;
+}
+
+#top{
+    color:white;
+    font-size:4rem;
+    padding:0;
+}
+
+#topper{
+    color:white;
+    font-size:1.3rem;
+    padding:0;
+    margin-top:15px;
+}
+
+.room-heading{
+    text-align:center;
+    font-size:4rem;
+    color:#00753b;
+    margin:30px 0;
+}
+
+.boxes{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.box1{
+    width:23%;
+    min-height:220px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    padding:20px;
+    transition:0.3s;
+}
+
+.box1:hover{
+    transform:translateY(-10px);
+}
+
+/* Tablet */
+@media(max-width:992px){
+
+    #top{
+        font-size:3rem;
+    }
+
+    .room-heading{
+        font-size:3rem;
+    }
+
+    .box1{
+        width:48%;
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    #top{
+        font-size:2.2rem;
+    }
+
+    #topper{
+        font-size:1rem;
+    }
+
+    .room-heading{
+        font-size:2.2rem;
+    }
+
+    .box1{
+        width:100%;
+    }
+}
+
+/* Small Mobile */
+@media(max-width:480px){
+
+    #top{
+        font-size:1.8rem;
+    }
+
+    #topper{
+        font-size:0.9rem;
+    }
+
+    .room-heading{
+        font-size:1.8rem;
+    }
+}
+.box1:hover{
+    margin-top: -2%;
+}
+
+.about-section {
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+#about {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    background: white;
+    border-radius: 17px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#left {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+#right {
+    flex: 1;
+    min-height: 300px;
+    background-image: url("./booking.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    #left,#right {
+        width: 100%;
+    }
+
+    #right {
+        min-height: 250px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .about-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    #left {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    #right {
+        min-height: 200px;
+    }
+}
+  
+  
+  /* Contact Section */
+#connects_us {
+    width: 100%;
+    min-height: 550px;
+    background: #3dcb84;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+#us {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#forms {
+    width: 50%;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#p2 {
+    background-color: #00753b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#p2:hover {
+    background-color: #005d2f;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    #forms {
+        width: 80%;
+    }
+
+    #us {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    #forms {
+        width: 95%;
+    }
+
+    #us {
+        font-size: 1.8rem;
+    }
+
+    form input,
+    form textarea,
+    #p2 {
+        font-size: 0.95rem;
+    }
+}
+/* About Creator Section */
+
+#creator-section{
+    width: 100%;
+    padding: 50px 20px;
+}
+
+#Creator{
+    color: #00753b;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contain{
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.heading{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contain p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.connect{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+
+/* Tablet */
+
+@media (max-width: 768px){
+
+    #Creator{
+        font-size: 2.8rem;
+    }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    #contain p{
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px){
+
+    #Creator{
+        font-size: 2rem;
+    }
+
+    .heading{
+        font-size: 1.2rem;
+    }
+
+    #contain{
+        width: 95%;
+        padding: 20px;
+    }
+
+    #contain p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .connect{
+        font-size: 1rem;
+    }
+}
+footer
+{
+    height: 10%;
+color: white;
+font-size: 1.3rem;
+background-color: #005d2f;
+padding-left: 35%;
+}
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            StayBooking
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#box"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-circle-info"></i> About</a></li>
+            <li><a href="Register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="login.html"><i class="fas fa-right-to-bracket"></i> Login</a></li>
+            <li><a href="admin_login.html"><i class="fas fa-right-to-bracket"></i> Admin</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <div id="box">
+                <h1 id="top">Welcome to StayBooking Platform</h1>
+                <br>
+                <h2 id="topper">Find and book hostels, PGs, and flats easily. Secure your perfect stay now!</h2>
+            </div>
+            <h1 id="" style="font-size: 4.4rem; color: #00753b; margin-left: 29%; margin-top: 1%; ">Room Facilities</h1>
+            <div class="boxes">
+               <div class="box1">
+                <h1 style="padding-left: 40px; color: #00753b; padding-top: 8px;">📶 Wi-Fi</h1>
+                <br><br>
+                <p style="padding-left: 35px; color: rgb(33, 32, 32); font-size: 1.5rem;">24/7 high-speed internet in every room.</p>
+            </div>
+               <div class="box1">
+                <h1 style="padding-left: 40px; color: #00753b; padding-top: 8px;">🛏️ Furnished Rooms</h1>
+           
+                <br>
+                <p style="padding-left: 35px; color: rgb(33, 32, 32); font-size: 1.3rem;">Bed, table, chair, and cupboard included.</p>
+               </div>
+               <div class="box1">
+                <h1 style="padding-left: 40px; color: #00753b; padding-top: 8px;">❄️ AC Rooms</h1>
+                <br><br>
+                <p style="padding-left: 35px; color: rgb(33, 32, 32); font-size: 1.2rem;">Comfortable air-conditioned rooms available.</p>
+               </div>
+               <div class="box1">
+                <h1 style="padding-left: 3px; color: #00753b; padding-top: 8px;">💼 Power Backup</h1>
+                <br><br>
+                <p style="padding-left: 35px; color: rgb(33, 32, 32); font-size: 1.2rem;">Reliable power backup for all rooms.</p>
+               </div>
+
+
+
+            </div>
+        </section>
+        
+        
+
+        <section class="about-section">
+    <div id="about">
+
+        <h1 class="about-title">About Us</h1>
+
+        <div class="about-content">
+
+            <div id="left">
+                Welcome to <strong>Stay Booking</strong> — your trusted partner for finding
+                the perfect place to stay! Whether you need a PG, hostel, or flat, we provide
+                verified listings with easy and secure booking. Focused on affordability,
+                safety, and convenience, we help students, working professionals, and families
+                find the accommodation they deserve. Join thousands who have found their dream
+                space with Stay Booking.
+            </div>
+
+            <div id="right"></div>
+
+        </div>
+
+    </div>
+</section>
+        <section>
+
+           <section id="connects_us">
+    <h1 id="us">Contact Us</h1>
+
+    <div id="forms">
+        <form>
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Enter Your Email">
+
+            <input type="tel" placeholder="Enter Your Phone Number">
+
+            <textarea placeholder="Your Message" rows="5"></textarea>
+
+            <button type="submit" id="p2">Send Message</button>
+        </form>
+    </div>
+</section>
+
+        <section id="creator-section">
+    <h1 id="Creator">About the Creator</h1>
+
+    <div id="contain">
+        <h2 class="heading">Hi, I'm Shalni Singh 👋</h2>
+
+        <p>
+            I’m a Computer Science student and a passionate full-stack web developer.
+            I enjoy solving real-world problems using technology and believe in creating
+            tools that make life simpler and more efficient.
+        </p>
+
+        <h2 class="heading">Why I Created StayBooking</h2>
+
+        <p>
+            As a student myself, I faced a lot of difficulty finding reliable and
+            affordable PGs and hostels when shifting to a new city. The available
+            platforms were either confusing, outdated, or lacked trust.
+        </p>
+
+        <p>
+            That’s why I built StayBooking — a user-friendly, verified, and secure
+            platform where students and professionals can easily discover suitable
+            places to stay. It’s more than just a website — it’s my small effort
+            to solve a common problem faced by many.
+        </p>
+
+        <p class="connect">Let's Connect:</p>
+    </div>
+</section>
+
+
+    </main>
+    <footer>
+© 2026 StayBooking. All rights reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        90deg,
+        rgba(2,0,36,1) 0%,
+        rgba(9,9,121,1) 35%,
+        rgba(0,212,255,1) 100%
+    );
+    padding:20px;
+}
+
+#box{
+    width:100%;
+    max-width:500px;
+    background-color:aliceblue;
+    border-radius:17px;
+    padding:30px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    font-size:2.2rem;
+}
+
+h3{
+    text-align:center;
+    color:aquamarine;
+    margin-top:10px;
+    margin-bottom:25px;
+}
+
+h2{
+    font-size:1.2rem;
+    margin-bottom:8px;
+}
+
+input{
+    width:100%;
+    height:50px;
+    border:2px solid black;
+    border-radius:17px;
+    padding-left:15px;
+    font-size:1rem;
+    margin-bottom:20px;
+}
+
+a{
+    display:block;
+    text-align:right;
+    margin-bottom:20px;
+    text-decoration:none;
+}
+
+#login{
+    width:100%;
+    height:50px;
+    background-color:blue;
+    color:white;
+    border-radius:17px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:1.1rem;
+    font-weight:bold;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    #box{
+        padding:20px;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
+    h3{
+        font-size:0.9rem;
+    }
+
+    h2{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="box">
+
+    <h1>Admin Login</h1>
+    <h3>Access your PG Booking Dashboard</h3>
+
+    <h2>Email</h2>
+    <input type="email" placeholder="Enter your Email ID">
+
+    <h2>Password</h2>
+    <input type="password" placeholder="Enter your Password">
+
+    <a href="#">Forgot Password?</a>
+
+    <div id="login">Login</div>
+
+</div>
+
+</body>
+</html>
